@@ -55,12 +55,12 @@ def page_not_found(error):
 
 @app.route('/profile/')
 def profile():
-  """Render the website's profile page."""
-  return render_template('profile.html', time=timeinfo())
+    """Render the website's profile page."""
+    return render_template('profile.html', time=timeinfo())
 
 def timeinfo():
-  now = time.strftime("%d/%m/%Y")
-  return  now
+    now = time.strftime("%d/%m/%Y")
+    return now
 
 if __name__ == '__main__':
     app.run(debug=True,host="0.0.0.0",port="8888")
